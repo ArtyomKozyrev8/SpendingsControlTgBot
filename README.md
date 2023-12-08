@@ -1,0 +1,2 @@
+# SpendingsControlTgBot
+Controls spendings

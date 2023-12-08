@@ -1,0 +1,3 @@
+yoyo-migrations==8.2.0
+asyncpg==0.29.0 # used for all code except migrations
+psycopg2==2.9.9	# used for migrations

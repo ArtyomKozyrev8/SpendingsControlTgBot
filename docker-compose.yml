@@ -1,0 +1,24 @@
+services:
+  postgres_spendings_db:
+    image: postgres:16
+    env_file:
+      - .env
+    restart: always
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRESQL_MAPPING_PORT=${POSTGRESQL_MAPPING_PORT}
+    ports:
+      - ${POSTGRESQL_MAPPING_PORT}:5432
+    volumes:
+      - postgres_spendings_db:/var/lib/postgresql/data
+    networks:
+      - spending-control-tg-bot-network
+    container_name: "postgres_spendings_db"
+volumes:
+  postgres_spendings_db:
+    driver: local
+networks:
+    spending-control-tg-bot-network:
+        driver: bridge

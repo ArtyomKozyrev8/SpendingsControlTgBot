@@ -1,3 +1,7 @@
 yoyo-migrations==8.2.0
 asyncpg==0.29.0 # used for all code except migrations
 psycopg2==2.9.9	# used for migrations
+aiogram==3.2.0
+pydantic==2.5.2
+pydantic-settings==2.1.0
+mypy==1.7.1
